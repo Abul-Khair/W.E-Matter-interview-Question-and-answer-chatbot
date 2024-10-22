@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # Load the trained model and tokenizer
 @st.cache_resource
 def load_model_and_tokenizer():
-    model_path = "/interview_qnda_model"  
+    model_path = "./interview_qnda_model"  
     try:
         tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
         model = AutoModelForCausalLM.from_pretrained(
