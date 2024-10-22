@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # Load the trained model and tokenizer
 @st.cache_resource
 def load_model_and_tokenizer():
-    model_path = r"C:\Users\Khairul\Documents\W.E Matter Chatbot\interview_qnda_model"  # Use raw string or double backslashes
+    model_path = "models/interview_qnda_model"
     model = AutoModelForCausalLM.from_pretrained(model_path)
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     return model, tokenizer
